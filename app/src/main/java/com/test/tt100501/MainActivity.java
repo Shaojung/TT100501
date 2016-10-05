@@ -36,4 +36,13 @@ public class MainActivity extends AppCompatActivity {
         Intent it = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(it);
     }
+    public void click4(View v)
+    {
+        Intent sendTextIntent = new Intent();
+        sendTextIntent.setAction(Intent.ACTION_SEND);
+        sendTextIntent.putExtra(Intent.EXTRA_TEXT, "aa我要分享的文字bb");
+        sendTextIntent.setType("text/plain");
+        startActivity(sendTextIntent);
+
+    }
 }
