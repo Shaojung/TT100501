@@ -23,7 +23,17 @@ public class MainActivity extends AppCompatActivity {
         // it.setAction(Intent.ACTION_VIEW);
         // it.setAction("android.intent.action.VIEW");
         startActivity(it);
-
-
+    }
+    public void click2(View v)
+    {
+        Uri uri = Uri.parse("tel:123");
+        Intent it = new Intent(Intent.ACTION_DIAL, uri);
+        startActivity(it);
+    }
+    public void click3(View v)
+    {
+        Uri uri = Uri.parse("geo:0,0?q=巨匠電腦台大認證中心");
+        Intent it = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(it);
     }
 }
